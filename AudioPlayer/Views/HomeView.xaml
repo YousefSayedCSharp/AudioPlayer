@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AudioPlayer.Views.HomeView"
+             
+             FlowDirection="RightToLeft"
+             BackgroundColor="Black"
+             
+             Title="Audio Player yS"
+             >
+    <ContentPage.Content>
+        <VerticalStackLayout VerticalOptions="Center">
+
+            <Image Source="fileaudio.svg"
+WidthRequest="100"                   
+                   HeightRequest="100"
+                   SemanticProperties.Description="صورة"
+                   />
+
+            <Label Text="{Binding lblAudioName}" TextColor="White" FontSize="Title" HorizontalTextAlignment="Center" Margin="10" />
+
+            <Grid VerticalOptions="EndAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Slider Maximum="{Binding max}" Value="{Binding value}" Minimum="0"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="7"
+                    Grid.Column="0"
+                    />
+
+                <Button TextColor="White" BackgroundColor="Black" VerticalOptions="EndAndExpand"
+                        Command="{Binding btnBack}"
+                        HorizontalOptions="Center"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        SemanticProperties.Description="السابق"
+                        FontFamily="FAS"
+                        Text="&#xf051;"
+                        />
+
+                <Button TextColor="White" BackgroundColor="Black" VerticalOptions="EndAndExpand"
+                        Command="{Binding btnBackWord}"
+                        HorizontalOptions="Center"
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        SemanticProperties.Description="ترجيع سريع"
+                        FontFamily="FAS"
+                        Text="&#xf04e;"
+                        />
+
+                <Button TextColor="White" BackgroundColor="Black" VerticalOptions="EndAndExpand"
+                        Command="{Binding btnPlayAndPause}"
+                        HorizontalOptions="Center"
+                        Grid.Row="2"
+                        Grid.Column="3"
+                        SemanticProperties.Description="{Binding    txtDescription}"
+                        FontFamily="FAS"
+                        Text="{Binding btnPlayAnPauseText}"
+                        />
+                
+                <Button TextColor="White" BackgroundColor="Black" VerticalOptions="EndAndExpand"
+                        Command="{Binding btnNextWord}"
+                        HorizontalOptions="Center"
+                        Grid.Row="2"
+                        Grid.Column="4"
+                        SemanticProperties.Description="تقديم سريع"
+  FontFamily="FAS"
+                        Text="&#xf04a;"
+                        />
+
+                <Button TextColor="White" BackgroundColor="Black" VerticalOptions="EndAndExpand"
+                        Command="{Binding               btnNext}"
+                        HorizontalOptions="Center"
+                        Grid.Row="2"
+                        Grid.Column="5"
+                        SemanticProperties.Description="التالي"
+  FontFamily="FAS"
+                        Text="&#xf048;"
+                        />
+
+            </Grid>
+
+            <Button Command="{Binding btn}" Text="Browse" TextColor="White" BackgroundColor="Blue" VerticalOptions="EndAndExpand" Margin="50,25,50,25" />
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

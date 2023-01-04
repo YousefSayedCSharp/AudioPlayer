@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AudioPlayer.MainPage"
+             
+             FlowDirection="RightToLeft"
+             BackgroundColor="Black"
+             >
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button Text="Click" />
+            <Label x:Name="lbl" TextColor="White" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
